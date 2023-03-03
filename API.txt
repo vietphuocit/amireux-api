@@ -1,0 +1,35 @@
+ - Collection
+    + GET /api/collection
+    + GET /api/collection/{id}
+    + POST /api/collection
+        data:   {
+                    "name": {name},
+                }
+    + DELETE /api/collection/{id}
+    + PUT /api/collection/{id}
+        data:   {
+                    "name": {name},
+                }
+ - Image
+    + POST /api/uploads
+        data:   {
+                    "files": {file},
+                    ...
+                    ...
+                    ...
+                }
+    + GET /api/uploads/files?product={product} -- Param product == NULL get all ELSE get image don't have product --
+    + GET /api/uploads/files/{id}
+ - Product
+    + POST /api/product
+        data:   {
+                    "name": {name},
+                    "price": {price},
+                    "description": {description},
+                    "collectionId": {collection_id},
+                    "quantity": {quantity},
+                    "imagesId": {imagesIdList},
+                    "specifications": {specificationList},
+                }
+    + GET /api/product
+    + GET /api/product/{id}
